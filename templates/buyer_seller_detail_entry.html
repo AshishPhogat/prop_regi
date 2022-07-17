@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css_files/buyer_seller_detail_entry.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form style="display: flex;flex-direction: column" class="main" method="post" action="blockchain">
+        {% csrf_token %}
+        <!-- -------------------------------------------------------------for seller -------------------------------------------------------- -->
+        <div style="display: flex;height:80vh ">
+        <div class="container">
+            <div id="form" class="form">
+                <h2> <u> Seller Details </u> </h2>
+                <div class="form-control">
+                    <label for="seller_full_name">Seller name</label>
+                    <input type="text" name="seller_name" placeholder="Seller's full name" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="seller_aadhar_no">seller aadhar no</label>
+                    <input type="number" name="seller_aadhar_no" placeholder="Seller's land private key" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="land_area">Land id</label>
+                    <input type="text" name="land_id" placeholder="Land id" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="land_coordinates">old coordinates</label>
+                    <input type="text" name="old_coordinates" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="seller_email">seller email</label>
+                    <input type="text" name="seller_email" />
+                    <small>Error message</small>
+                </div>
+
+                <!-- <button type="submit">Submit</button> -->
+            </div>
+        </div>
+
+        <!--------------------------------------------------------- for buyer ----------------------------------------------------->
+        <div class="container">
+            <div id="form" class="form">
+                <h2> <u> Buyer Details </u></h2>
+                <div class="form-control">
+                    <label for="buyer_full_name">Buyer name</label>
+                    <input type="text" name="buyer_name" placeholder="Buyer full name" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="land&s_coordinate">buyer aadhar no</label>
+                    <input type="number" name="buyer_aadhar_no" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="land_coordinates">registration price</label>
+                    <input type="text" name="registration_price" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="land_coordinates">new coordinates</label>
+                    <input type="text" name="new_coordinates" />
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="seller_email">buyer email</label>
+                    <input type="text" name="buyer_email" />
+                    <small>Error message</small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <button class="submit_button" type="submit" >Submit</button>
+    </form>
+{#    <button class="submit_button" type="submit" >Submit</button>#}
+    <!-- script -->
+    <script src="../static/js_files/buyer_seller_detail_entry.js"></script>
+</body>
+</html>

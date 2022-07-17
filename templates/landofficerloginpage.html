@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login page</title>
+  <link rel="stylesheet" href="{% static 'css_files/landofficerloginpage.css' %}">
+</head>
+
+<body>
+  <div class="center">
+    <h1>Login</h1>
+    <form method="post" action="officerlogin">
+        {% csrf_token %}
+      <div class="txt_field">
+        <input type="text" name="username" required>
+        <span></span>
+        <label>Voter ID</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" name="password" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+      <!-- <div class="pass">Forgot Password?</div> -->
+      <input type="submit" value="Login">
+      <a href="afterlogin.html"></a>
+      <div class="signup_link">
+          <a href="VOTER APPLICATION.html"></a>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
